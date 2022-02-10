@@ -17,7 +17,14 @@ function calcShipping(sum, min, shipping) {
     // то shippingSum присвоить значение shippingPrice
 
     // Конец решения задания №2.1.
-
+    let shippingSum;
+    if productsSum = 0 { 
+        shippingSum = 0
+    }
+        
+         if productsSum >= freeShippingMinSum {
+            shippingSum = 0
+        }
     return shippingSum;
 }
 
