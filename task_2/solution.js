@@ -37,11 +37,10 @@ function calcDiscount(sum, min, discount) {
     let productsSum = sum; // сумма в корзине
     let discountMinSum = min; // минимальная цена для скидки
     let discountPart = discount; // величина скидки в процентах
-    let discountSum;
+    let discountSum; // Скидка
     if (productsSum >= discountMinSum) {
-        discountSum = `${discountPart} %`;
-    }
-    else { 
+        discountSum = sum * (discount / 100);
+    } else { 
         discountSum = 0;
     }
 
@@ -63,7 +62,7 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     let discountSum = calcDiscount(sum, discountMinSum, discountPart);
     let totalSum;
     totalSum = productsSum;
-    totalSum = `${totalSum - discountSum}`; // итоговая сумма с учётом скидки
+    totalSum = totalSum - discountSum; // итоговая сумма с учётом скидки
 
     // Задача №2.3. Рассчитать скидки и доставку в корзине
 
@@ -75,10 +74,9 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
     totalSum + shippingSum;
     let freeShipping;
-    shippingSum = 0 {
+    if (shippingSum = 0) {
         freeShipping = true;
-    }
-    shippingSum > 0 {
+    } else {
         freeShipping = false;
     }
 
@@ -91,4 +89,4 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // Конец решения задачи №2.3.
 
     return {discount: discountSum, freeShipping, shipping: shippingSum, total: totalSum};
-}
+    }
