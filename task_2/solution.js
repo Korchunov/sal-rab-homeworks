@@ -50,7 +50,7 @@ function calcDiscount(sum, min, discount) {
 
     // Конец решения задания №2.2.
 
-    return discountSum;
+    return discountPart;
 }
 
 function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shippingPrice}) {
@@ -68,9 +68,9 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // уменьшите totalSum на discountSum
 
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
-    totalSum + shippingSum;
+    totalSum + (totalSum, shippingFreeMinSum, shippingPrice);
     let freeShipping;
-    (shippingSum == 0) ? freeShipping = true : freeShipping = false;
+    shippingSum = 0
 
 
     
