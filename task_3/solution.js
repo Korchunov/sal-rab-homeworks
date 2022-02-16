@@ -6,7 +6,10 @@ function renderCartItem(item) {
     itemCountText = itemCountText + ' x ';
     itemCountText = itemCountText + price; // + цена
     itemCountText = itemCountText + ' ₽ = ';
-    let sum = count - price;
+    let value = count * price; // стоимость = количество * цену
+    let sum = value;
+    itemCountText = itemCountText + sum;
+    itemCountText = itemCountText + ' ₽'; 
 
 
     // Задание №3.1. Формирование строки корзины
