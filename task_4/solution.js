@@ -1,6 +1,13 @@
 // Задание 4.1. Вывод карточек товаров
 
 function parseProducts(json) {
+    parseProducts = JSON.parse(json);
+    let data = json;
+    return data;
+
+function renderProductsCards(json);
+return clearProducts;
+
     // Аргументом функции является JSON
 
     // Преобразуйте строку json, переданную как аргумент функции,
