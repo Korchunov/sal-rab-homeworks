@@ -3,18 +3,27 @@
 function parseProducts(json) {
     let parse = JSON.parse(json);
     let data = parse;
-    return data.products;
+    let products;
+    products = data.products;
+    return products;
+}
+
+
+function renderProductsCards(json){
+    clearProducts();
+     parseProducts(json);
+    let products;
+    products = parseProducts(json);
+    length = products.length;
+    for (let i = 0; i < length; i += 1) {
+    javascript
+    addProduct(products[i]);
+    
+}
     
 
-function renderProductsCards(json);
-clearProducts();
-parseProducts(json);
-let products = parseProducts
-length = products.length;
-for (let i=0; i < products.length; i++) {
-    console.log(products[i]);
-}
 return clearProducts;
+}
 
     // Аргументом функции является JSON
 
@@ -22,7 +31,7 @@ return clearProducts;
     // в объект с помощью функции JSON.parse(json)
     // и запишите в переменную data
     // Верните как результат функции свойство products объекта data
-}
+
 
 // Напишите функцию renderProductsCards(json)
 // Аргументом функции является JSON
