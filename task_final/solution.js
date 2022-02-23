@@ -43,9 +43,12 @@ function sendRequest(name, phone, address, goods, sum) {
     let name = data.client.name;
     data.client = name + ' ' + phone
     let client = data.client;
-    let sum = "900";
+    let sum = 900;
     data.order.sum = sum;
     data.order = address, sum;
+
+    const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
+        expect(received).toEqual(expected);
 
     let countOfGoods = goods.length;
 
