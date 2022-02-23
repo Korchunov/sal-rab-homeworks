@@ -34,7 +34,17 @@
 // }
 
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [title, count], order: {adress, sum}, client: {name, phone}};
+    let data = {goods: [title, count], order: {adress: {street, house, entrance, floor, flat}, sum}, client: {name, phone}}; 
+    data.order.adress.street = "ул. Ленина";
+    let street = data.order.adress.street;
+    data.order.adress.house = "дом 2";
+    let house = data.order.adress.house;
+    data.order.adress.entrance = "4 подъезд";
+    let entrance = data.order.adress.entrance;
+    data.order.adress.floor = "5 этаж";
+    let floor = data.order.adress.floor;
+    data.order.adress.flat = "кв 53";
+    let flat = data.order.adress.flat;
     let address;
     adress = street + ' ' + house + ' ' + entrance + ' ' + floor + ' ' + flat;
     data.client.phone = phone;
