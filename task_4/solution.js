@@ -9,7 +9,6 @@ function parseProducts(json) {
 
 function renderProductsCards(json){
     clearProducts();
-    parseProducts(json);
     let products;
     products = parseProducts(json);
     let length = products.length;
