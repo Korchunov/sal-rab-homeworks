@@ -33,35 +33,4 @@
 //    }
 // }
 
-function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [{title: "Пицца", count: "2"}], order: {adress, sum}, client: {name, phone}}; 
-    data.order.adress = "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53";
-    let address = data.order.adress;
-    data.client.phone = "+7(987)65-43-210";
-    let phone = data.client.phone;
-    data.client.name = 'Иван';
-    let name = data.client.name;
-    data.client = name + ' ' + phone
-    let client = data.client;
-    let sum = 900;
-    data.order.sum = sum;
-    data.order = address, sum;
 
-    const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
-        expect(received).toEqual(expected);
-
-    let countOfGoods = goods.length;
-
-    for (let i = 0; i <= countOfGoods; i += 1) {
-        data.goods.push(goods[i].title);
-    }
-
-    data.order.address = address;
-    data.order.sum = name + phone + address + goods + sum;
-
-    
-
-    let jsonData = JSON.stringify(data);
-
-    return jsonData;
-}
