@@ -6,8 +6,6 @@ function sendRequest(name, phone, address, goods, sum) {
     data.client.phone = phone;
     data.client.name = 'Иван';
     data.client.name = name;
-    data.client = name + ' ' + phone
-    data.client = client;
     data.order.sum = 900;
     data.order.sum = sum;
     data.order = address + ' ' + sum;
