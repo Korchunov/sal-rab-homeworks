@@ -1,7 +1,7 @@
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [{title: "Пицца", count: "2"}], order: {adress: {street, house, entrance, floor, flat}, sum}, client: {name, phone}}; 
-    data.order.adress = "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53";
-    data.order.adress = address;
+    let data = {goods: [{title: "Пицца", count: "2"}], order: {address: {street, house, entrance, floor, flat}, sum}, client: {name, phone}}; 
+    data.order.address = "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53";
+    data.order.address = address;
     data.client.phone = "+7(987)65-43-210";
     data.client.phone = phone;
     data.client.name = 'Иван';
