@@ -4,7 +4,6 @@ function sendRequest(name, phone, address, goods, sum) {
     address = {street, house, entrance, floor, flat};
     data.client.phone = phone;
     data.client.name = name;
-    data.client = name + ' ' + phone;
     data.order.sum = sum;
     data.order.sum = name + phone + address + goods + sum;
 
