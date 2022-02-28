@@ -5,6 +5,7 @@ function sendRequest(name, phone, address, goods, sum) {
     data.client.phone = phone;
     data.client.name = name;
     data.order.sum = sum;
+    data.goods.title = title;
     data.order.sum = name + phone + address + goods + sum;
 
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
