@@ -1,14 +1,11 @@
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [{title: "Пицца", count: "2"}], order: {address, sum}, client: {name, phone}}; 
-    data.order.address = "ул. Ленина, дом 2, 4 подъезд, 5 этаж, кв 53";
+    let data = {goods: [{title, count}], order: {address, sum}, client: {name, phone}}; 
     data.order.address = address;
-    data.client.phone = "+7(987)65-43-210";
+    address = {street, house, entrance, floor, flat};
     data.client.phone = phone;
-    data.client.name = 'Иван';
     data.client.name = name;
-    data.order.sum = 900;
+    data.client = name + ' ' + phone;
     data.order.sum = sum;
-    data.order = address + ' ' + sum;
     data.order.sum = name + phone + address + goods + sum;
 
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
