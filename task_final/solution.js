@@ -14,7 +14,7 @@ function sendRequest(name, phone, address, goods, sum) {
         data.goods.push(goods[i].title);
     };
 
-    let jsonData = JSON.stringify(data);
+    let jsonData = JSON.stringify({data});
 
     return jsonData;
 }
