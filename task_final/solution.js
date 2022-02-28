@@ -8,7 +8,7 @@ function sendRequest(name, phone, address, goods, sum) {
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
         expect(received).toEqual(expected);
 
-    let countOfGoods = goods.length;
+    let countOfGoods = data.goods.length;
 
     for (let i = 0; i <= countOfGoods; i += 1) {
         data.goods.title.push(goods[i].title);
