@@ -5,6 +5,7 @@ function sendRequest(name, phone, address, goods, sum) {
     data.client.name = name;
     data.order.sum = sum;
     data.order.sum = name + phone + address + goods + sum;
+
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
         expect(received).toEqual(expected);
 
@@ -13,6 +14,10 @@ function sendRequest(name, phone, address, goods, sum) {
     for (let i = 0; i <= countOfGoods; i += 1) {
         data.goods.push(goods[i].title);
     }
+
+    
+
+    
 
     let jsonData = JSON.stringify(data);
 

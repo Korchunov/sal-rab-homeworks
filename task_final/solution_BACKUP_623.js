@@ -4,7 +4,12 @@ function sendRequest(name, phone, address, goods, sum) {
     data.client.phone = phone;
     data.client.name = name;
     data.order.sum = sum;
+<<<<<<< HEAD
+=======
+    data.goods = goods;
+>>>>>>> 3bf9a149033c8cc0db0791193243273009724335
     data.order.sum = name + phone + address + goods + sum;
+
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
         expect(received).toEqual(expected);
 
