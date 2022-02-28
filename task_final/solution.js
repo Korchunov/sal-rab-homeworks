@@ -1,11 +1,9 @@
 function sendRequest(name, phone, address, goods, sum) {
     let data = {goods: [{title, count}], order: {address, sum}, client: {name, phone}}; 
     data.order.address = address;
-    address = {street, house, entrance, floor, flat};
     data.client.phone = phone;
     data.client.name = name;
     data.order.sum = sum;
-    data.goods = [{id, title, count, price}];
     data.order.sum = name + phone + address + goods + sum;
 
     const received = JSON.parse(sendRequest(name, phone, address, goods, sum));
