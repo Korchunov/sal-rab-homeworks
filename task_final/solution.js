@@ -1,7 +1,6 @@
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [{title, count}], order: {address, sum}, client: {name, phone}}; 
+    let data = {goods: [{title: goods.title, count: goods.count}], order: {address, sum}, client: {name, phone}}; 
     data.order.address = address;
-    data.goods = {goods: [{title, count}]};
     data.client.phone = phone;
     data.client.name = name;
     data.order.sum = sum;
