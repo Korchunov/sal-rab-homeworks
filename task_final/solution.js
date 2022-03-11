@@ -2,8 +2,7 @@ function sendRequest(name, phone, address, goods, sum) {
     let data = {goods: [], order: {}, client: {}}; 
     data.order.address = address;
     data.client.phone = phone;
-    data.goods.title = title;
-    data.goods.count = count;
+  
     data.client.name = name;
     data.order.sum = sum;
     data.order.sum = name + phone + address + goods + sum;
